@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main(){
+int i,n;
+int a[i],key,mid,low=0,high,found=0;
+printf("enter size:");
+scanf("%d",&n);
+high=n-1;
+printf("enter values:");
+for(i=0;i<n;i++){
+scanf("%d",&a[i]);
+}
+printf("enter key value:");
+scanf("%d",&key);
+mid=(low+high)/2;
+if(key==a[mid]){
+found=1;
+
+}
+else if(key<a[mid]){
+    high=mid-1;
+}
+else if(key>a[mid]){
+    low=mid+1;
+}
+if(found==1){
+    printf("element found at location:%d",mid);
+}
+else{
+    printf("not found");
+}
+return;}
